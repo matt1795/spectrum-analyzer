@@ -1,0 +1,72 @@
+\section{Goals}
+
+The main purpose/goals for this project are:
+
+\begin{itemize}
+	\item{Hands on experience with RF circuits}
+	\item{Design PCB Layout for RF Circuits}
+	\item{Get a sweet SA}
+	\item{Catalyst for even more RF work}
+\end{itemize}
+
+
+\subsection{Long-Term}
+
+So once all of this is done and I've got a halfway decent spectrum analyzer
+designed, I want to create a digital interface for use on a linux based machine.
+This would also be a large undertaking since the analog to digital interface is
+a module unto itself, and I will likely get a reason to finally make a linux
+kernel driver, which I've been wanting to do for a while. And then from there
+the benefits for experimentation would be awesome, a programming interface for
+testing and access to more data for all sorts of computations.
+
+\section{Design}
+
+\begin{circuitikz} \draw
+	(0,0) to[short,o-] ++(0.3,0)
+	to[lowpass,>] ++(2,0)
+	node[mixer] (m) {}
+	(m.1) to[short] ++(-1,0)
+	(m.2) to[vco] ++(0,-1);
+\end{circuitikz}
+
+The overall system design comes mostly from \cite{qsl} and I will be extensively
+experimenting with each module's implementation.
+
+\subsection{Step Attenuator}
+
+\subsection{Superheterodyne Receiver}
+
+\subsubsection{Input Low-Pass Filter}
+
+\subsubsection{First Mixer}
+
+\subsubsection{First Local Oscillator}
+
+\subsubsection{Notch Filter}
+
+\subsubsection{Second Mixer}
+
+\subsubsection{Second Local Oscillator}
+
+\subsubsection{Post-Mixer Amp}
+
+\subsection{Sweep and Sync}
+
+\subsection{Output Stage}
+
+\subsubsection{Resolution Filters}
+
+\subsubsection{RF Switches}
+
+\subsubsection{IF Amp}
+
+\subsubsection{Log Detector Video Amp}
+
+\section{Next Steps}
+
+I plan on experimenting and designing the modules one after the other as I go,
+making sure to do integration tests to make sure that I get expected system
+performance once multiple modules are added togther.
+
+Each lab will be focused on implementing a single module, 
