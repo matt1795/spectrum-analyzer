@@ -13,6 +13,7 @@ output: doc
 	mv build/$(NAME).pdf .
 
 doc:
+	mkdir -p $(BUILD_DIR)
 	pdflatex $(FLAGS) main.tex
 	bibtex $(BUILD_DIR)/$(NAME)
 	pdflatex $(FLAGS) main.tex

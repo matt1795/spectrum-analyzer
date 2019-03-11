@@ -33,17 +33,78 @@ testing and access to more data for all sorts of computations.
 The overall system design comes mostly from \cite{qsl} and I will be extensively
 experimenting with each module's implementation.
 
+\subsection{Power Supply}
+
+\cite{qsl} uses +/- 15V supply rails, says to only used linear regulators
+
+I want to test with switching mode power supplies to see the effect.
+
 \subsection{Step Attenuator}
+
+\cite{qsl} Hittite HMC307 (31dB eval board)
 
 \subsection{Superheterodyne Receiver}
 
 \subsubsection{Input Low-Pass Filter}
 
+1GHz Low Pass filter
+
+\cite{qsl} 3dB point at 1GHz, 0.65 dB insertion loss, equivalent from
+mini-circuits: SLP-1000
+
+\cite{lea} had a 1.75GHz SA and used a microstrip filter for this. I do not have
+any size requirements, so I might attempt to create a 1GHz microstrip filter.
+The wavelength is
+
+\begin{equation}
+	\lambda = \frac{c}{f}
+	= \frac{3*10^8 m/s}{1GHz}
+	= 0.3m
+\end{equation}
+
+which might be a bit large, but if I only have to keep components to 1/2 or 1/4
+wavelength then that just means 15cm and 7.5cm respectively.
+
+Using the SLP-1000 as a baseline for attenuation performance, the 20dB point is
+as 1.35 times the cuttoff frequency (it says 990MHz is the 3dB cutoff but let's
+round up to 1GHz), and the 40dB point at 1.75. This roughly corresponds to a
+rolloff of 150 and 175 dB/decade respectively. Hooo fuck bud, that's some high
+order filters right there.
+
+More details of this filter's implementation will be discussed in a later report
+where we get our hands dirty.
+
 \subsubsection{First Mixer}
+
+\cite{qsl} "ideal" will have 40dB isolation between LO and RF ports, make sure
+that it has good low frequency response.
+
+\cite{lea} states that the low frequency response of the filter is based on the
+noise figure while the higher frequency response is determined by its distortion
+-- intermods.
+
+\cite{lea} argues that the mixer has little protection from DC or overpowered
+RF, so it should be able to be repaired easily. Commercially available ones are
+doubly balanced with schottky quads and ferrite balancing transformers. Instead
+the simple approach is going to use a double schottky diode -- BAT14-099.
 
 \subsubsection{First Local Oscillator}
 
-\subsubsection{Notch Filter}
+\subsubsection{Cavity BPF Filter}
+
+\cite{lea} had a BPF Filter center frequency of 2.1GHz and a bandwidth of 25MHz.
+
+\begin{equation}
+	Q = frac{f_o}{BW}
+	= frac{2.1GHz}{25MHz}
+	= 84
+\end{equation}
+
+Both \cite{qsl} and \cite{lea} used cavity filters, and the high frequency of
+operation likely dispells the used of linear compontents. While the microstrip
+filters are really cool, after some reading I found that the downside to them is
+that the pcb material contributes to dielectric losses, and since this filter
+needs to be tight as fuck, a cavity filter will do.
 
 \subsubsection{Second Mixer}
 
@@ -56,6 +117,8 @@ experimenting with each module's implementation.
 \subsection{Output Stage}
 
 \subsubsection{Resolution Filters}
+
+While having a fixed resolution, or discrete 
 
 \subsubsection{RF Switches}
 
