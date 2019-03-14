@@ -1,0 +1,12 @@
+BPF 
+
+Vin vin 0 DC 0 AC 1
+
+Cin vin vout 1u
+L vout 0 1m
+C vout 0 180p
+
+
+.ac dec 10 0.1 10G
+
+.end
