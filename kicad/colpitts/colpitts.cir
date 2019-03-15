@@ -1,0 +1,16 @@
+.title KiCad schematic
+Q1 Net-_C1-Pad2_ Net-_C3-Pad1_ Net-_Ce1-Pad2_ NC_01 NPNM
+C4 vout Net-_C1-Pad2_ 0.1u
+L1 Net-_C1-Pad2_ Net-_C2-Pad2_ 1m
+Vcc1 Net-_L2-Pad1_ 0 DC 15
+L2 Net-_L2-Pad1_ Net-_C1-Pad2_ 300m
+C3 Net-_C3-Pad1_ Net-_C2-Pad2_ 0.1u
+R1 Net-_L2-Pad1_ Net-_C3-Pad1_ 10k
+R2 Net-_C3-Pad1_ 0 4.7k
+Re1 Net-_Ce1-Pad2_ 0 1.5k
+Ce1 0 Net-_Ce1-Pad2_ 0.1u
+C2 0 Net-_C2-Pad2_ 1u
+C1 0 Net-_C1-Pad2_ 1u
+Rl1 vout 0 1Meg
+.model NPNM npn
+.end

@@ -1,0 +1,266 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:QNPN Q1
+U 1 1 5C8BA613
+P 5000 3900
+F 0 "Q1" H 5227 3946 50  0000 L CNN
+F 1 "NPNM" H 5227 3855 50  0000 L CNN
+F 2 "" H 5000 3900 50  0001 C CNN
+F 3 "~" H 5000 3900 50  0001 C CNN
+	1    5000 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND0101
+U 1 1 5C8BA68F
+P 5150 4950
+F 0 "#GND0101" H 5150 4850 50  0001 C CNN
+F 1 "0" H 5150 5037 50  0000 C CNN
+F 2 "" H 5150 4950 50  0001 C CNN
+F 3 "~" H 5150 4950 50  0001 C CNN
+	1    5150 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C4
+U 1 1 5C8BA6BB
+P 5450 3500
+F 0 "C4" V 5135 3500 50  0000 C CNN
+F 1 "0.1u" V 5226 3500 50  0000 C CNN
+F 2 "" H 5450 3500 50  0001 C CNN
+F 3 "~" H 5450 3500 50  0001 C CNN
+	1    5450 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:INDUCTOR L1
+U 1 1 5C8BA745
+P 3750 3900
+F 0 "L1" H 3750 4115 50  0000 C CNN
+F 1 "10m" H 3750 4024 50  0000 C CNN
+F 2 "" H 3750 3900 50  0001 C CNN
+F 3 "~" H 3750 3900 50  0001 C CNN
+	1    3750 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE Vcc1
+U 1 1 5C8BA823
+P 6350 3850
+F 0 "Vcc1" H 6578 3896 50  0000 L CNN
+F 1 "DC 15" H 6578 3805 50  0000 L CNN
+F 2 "" H 6350 3850 50  0001 C CNN
+F 3 "~" H 6350 3850 50  0001 C CNN
+	1    6350 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:INDUCTOR L2
+U 1 1 5C8BA969
+P 5150 3200
+F 0 "L2" V 5104 3277 50  0000 L CNN
+F 1 "300m" V 5195 3277 50  0000 L CNN
+F 2 "" H 5150 3200 50  0001 C CNN
+F 3 "~" H 5150 3200 50  0001 C CNN
+	1    5150 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:C C3
+U 1 1 5C8BAADD
+P 4350 3900
+F 0 "C3" V 4035 3900 50  0000 C CNN
+F 1 "0.1u" V 4126 3900 50  0000 C CNN
+F 2 "" H 4350 3900 50  0001 C CNN
+F 3 "~" H 4350 3900 50  0001 C CNN
+	1    4350 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:R R1
+U 1 1 5C8BABAE
+P 4650 3200
+F 0 "R1" H 4718 3246 50  0000 L CNN
+F 1 "10k" H 4718 3155 50  0000 L CNN
+F 2 "" H 4650 3200 50  0001 C CNN
+F 3 "~" H 4650 3200 50  0001 C CNN
+	1    4650 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R2
+U 1 1 5C8BAC14
+P 4650 4600
+F 0 "R2" H 4718 4646 50  0000 L CNN
+F 1 "4.7k" H 4718 4555 50  0000 L CNN
+F 2 "" H 4650 4600 50  0001 C CNN
+F 3 "~" H 4650 4600 50  0001 C CNN
+	1    4650 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R Re1
+U 1 1 5C8BAC80
+P 5150 4600
+F 0 "Re1" H 5218 4646 50  0000 L CNN
+F 1 "1.5k" H 5218 4555 50  0000 L CNN
+F 2 "" H 5150 4600 50  0001 C CNN
+F 3 "~" H 5150 4600 50  0001 C CNN
+	1    5150 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C Ce1
+U 1 1 5C8BADA4
+P 5500 4600
+F 0 "Ce1" H 5322 4554 50  0000 R CNN
+F 1 "0.1u" H 5322 4645 50  0000 R CNN
+F 2 "" H 5500 4600 50  0001 C CNN
+F 3 "~" H 5500 4600 50  0001 C CNN
+	1    5500 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L pspice:C C2
+U 1 1 5C8BAE1E
+P 4050 4200
+F 0 "C2" H 3872 4154 50  0000 R CNN
+F 1 "240p" H 3872 4245 50  0000 R CNN
+F 2 "" H 4050 4200 50  0001 C CNN
+F 3 "~" H 4050 4200 50  0001 C CNN
+	1    4050 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L pspice:C C1
+U 1 1 5C8BAE77
+P 3450 4200
+F 0 "C1" H 3272 4154 50  0000 R CNN
+F 1 "24p" H 3272 4245 50  0000 R CNN
+F 2 "" H 3450 4200 50  0001 C CNN
+F 3 "~" H 3450 4200 50  0001 C CNN
+	1    3450 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3450 4450 3450 4900
+Wire Wire Line
+	3450 4900 4050 4900
+Wire Wire Line
+	5500 4900 5500 4850
+Wire Wire Line
+	5150 4950 5150 4900
+Connection ~ 5150 4900
+Wire Wire Line
+	5150 4900 5500 4900
+Wire Wire Line
+	5150 4850 5150 4900
+Wire Wire Line
+	4650 4850 4650 4900
+Connection ~ 4650 4900
+Wire Wire Line
+	4650 4900 5150 4900
+Wire Wire Line
+	4050 4450 4050 4900
+Connection ~ 4050 4900
+Wire Wire Line
+	4050 4900 4650 4900
+Wire Wire Line
+	3450 3950 3450 3900
+Wire Wire Line
+	3450 3500 5150 3500
+Wire Wire Line
+	5150 3550 5150 3500
+Connection ~ 5150 3500
+Wire Wire Line
+	5150 3500 5200 3500
+Wire Wire Line
+	5150 3450 5150 3500
+Wire Wire Line
+	4650 3450 4650 3900
+Wire Wire Line
+	4650 2950 4650 2900
+Wire Wire Line
+	4650 2900 5150 2900
+Wire Wire Line
+	6350 2900 6350 3550
+Wire Wire Line
+	5150 2950 5150 2900
+Connection ~ 5150 2900
+Wire Wire Line
+	5150 2900 6350 2900
+Wire Wire Line
+	5150 4350 5150 4300
+Wire Wire Line
+	5500 4350 5500 4300
+Wire Wire Line
+	5500 4300 5150 4300
+Connection ~ 5150 4300
+Wire Wire Line
+	5150 4300 5150 4250
+Wire Wire Line
+	6350 4150 6350 4900
+Wire Wire Line
+	6350 4900 5800 4900
+Connection ~ 5500 4900
+Wire Wire Line
+	3500 3900 3450 3900
+Connection ~ 3450 3900
+Wire Wire Line
+	3450 3900 3450 3500
+Wire Wire Line
+	4000 3900 4050 3900
+Wire Wire Line
+	4050 3950 4050 3900
+Connection ~ 4050 3900
+Wire Wire Line
+	4050 3900 4100 3900
+Wire Wire Line
+	4600 3900 4650 3900
+Connection ~ 4650 3900
+Wire Wire Line
+	4650 3900 4650 4350
+Wire Wire Line
+	4700 3900 4650 3900
+Text Notes 6550 3450 0    50   ~ 0
+.model NPNM npn\n
+$Comp
+L pspice:R Rl
+U 1 1 5C8BEA48
+P 5800 3950
+F 0 "Rl" H 5868 3996 50  0000 L CNN
+F 1 "1Meg" H 5868 3905 50  0000 L CNN
+F 2 "" H 5800 3950 50  0001 C CNN
+F 3 "~" H 5800 3950 50  0001 C CNN
+	1    5800 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3500 5800 3500
+Wire Wire Line
+	5800 3500 5800 3700
+Wire Wire Line
+	5800 4200 5800 4900
+Connection ~ 5800 4900
+Wire Wire Line
+	5800 4900 5500 4900
+Text GLabel 5900 3500 2    50   Input ~ 0
+vout
+Wire Wire Line
+	5900 3500 5800 3500
+Connection ~ 5800 3500
+$EndSCHEMATC
