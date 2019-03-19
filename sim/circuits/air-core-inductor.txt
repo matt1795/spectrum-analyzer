@@ -1,0 +1,29 @@
+QOIL™ — https://hamwaves.com/qoil/ — v20181217
+  Coil design 2019-03-18 21:52
+
+// This design requires that I use 18 AWG wire and wrap it around 1/8" rod
+
+INPUT
+  mean diameter of the coil    D = 4.22 mm
+  number of turns              N = 2
+  length of the coil           ℓ = 2.1 mm
+  wire or tubing diameter      d = 1.05 mm
+  design frequency             f = 152 MHz
+  The (plating) material is annealed copper.
+
+INTERMEDIATE RESULTS
+  winding pitch                p = 1.05 mm
+  physical conductor length    ℓ_w_phys = 26.6 mm
+  effective pitch angle        ψ = 5.29°
+
+RESULTS
+  Effective equivalent circuit
+    effective series inductance @ design frequency          L_eff_s = 0.012 μH
+    effective series reactance @ design frequency           X_eff_s = 11.1 Ω
+    effective series AC resistance @ design frequency       R_eff_s = 0.064 Ω
+    effective unloaded quality factor @ design frequency    Q_eff = 174
+  Lumped circuit equivalent
+    f-independent series inductance; geometrical formula    L_s = 0.011 μH
+    series AC resistance @ design frequency                 R_s = 0.054 Ω
+    parallel stray capacitance @ design frequency           C_p = 8.1 pF
+  Self-resonant frequency                                   f_res = 3827.502 MHz
