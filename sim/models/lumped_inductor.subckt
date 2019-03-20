@@ -1,0 +1,13 @@
+* Lumped Inductor Model
+*
+* Author: Matthew Knight
+* File Name: lumped_inductor.subckt
+* Date: 2018-03-19
+
+.subckt lumped_inductor 1 2 l=1 rs=1 cp=1
+
+L 1 3 {l}
+Rs 3 2 {rs}
+Cp 1 2 {cp}
+
+.ends lumped_inductor
