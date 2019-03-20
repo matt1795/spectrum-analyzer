@@ -1,0 +1,22 @@
+Colpitts Oscillator Example
+
+.model KST10 NPN level=2 bf=60 vje=0.95
+
+Vcc 1 0 DC 15
+
+R1 1 2 10k
+R2 2 0 4.7k
+Rc 1 3 1k
+Re 4 0 1.5k
+Ce 4 0 0.01u
+
+C3 2 5 0.1u
+C4 3 vout 0.1u
+Rl vout 0 1Meg
+Q1 3 2 4 KST10
+
+L 5 3 10m
+C1 5 0 24n
+C2 3 0 240n
+
+.end
