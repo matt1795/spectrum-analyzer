@@ -9,12 +9,14 @@ Vin vin 0 DC 0 AC 1
 R1 1 2 6.8k
 R2 2 0 10k
 Rc 1 3 100
-Re vout 0 1k
+Re 5 0 1k
 Cin vin 2 1u
+Cout vout 5 1u
 
-Q1 3 2 vout KST10
+Q1 3 2 5 KST10
 
 .options filetype=ascii
 .ac dec 10 .01 10G
+.plot vdb(vout)
 
 .end

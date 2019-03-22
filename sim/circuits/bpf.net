@@ -1,12 +1,22 @@
 BPF 
+* for 152MHz midband C=265.3pF, 162MHz midband C= 230pF
+
+.include ../models/lumped_inductor.subckt
 
 Vin vin 0 DC 0 AC 1
 
-Cin vin vout 1u
-L vout 0 1m
-C vout 0 180p
+Rs vin 1 1k
+C1 1 gnd 210p
+C2 vout gnd 210p
+XL 1 vout lumped_inductor l=11n cp=8.8p rs=53m
 
+Rl vout 0 1k
 
-.ac dec 10 0.1 10G
+.ac dec 1000 1Meg 1G
 
+.control
+run
+plot vdb(vout)
+plot vp(vout)
+.endc
 .end
